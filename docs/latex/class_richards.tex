@@ -1,0 +1,212 @@
+\hypertarget{class_richards}{}\doxysection{Richards Class Reference}
+\label{class_richards}\index{Richards@{Richards}}
+
+
+the main model class  
+
+
+
+
+{\ttfamily \#include $<$richards.\+h$>$}
+
+Inheritance diagram for Richards\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_richards}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_richards_a8c177f09b9d5c873439c1585277cb36f}{Richards}} (\mbox{\hyperlink{class_grid}{Grid}} grid, \mbox{\hyperlink{struct_settings}{Settings}} stgin)
+\begin{DoxyCompactList}\small\item\em constructs \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a674b90c4149f90958cf46bed2362379c}\label{class_richards_a674b90c4149f90958cf46bed2362379c}} 
+double \mbox{\hyperlink{class_richards_a674b90c4149f90958cf46bed2362379c}{f\+\_\+poro}} (double depth, double poro)
+\begin{DoxyCompactList}\small\item\em computes porosity as a function of depth (-\/) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a533af24824c87e2bced1022c5432d2ad}\label{class_richards_a533af24824c87e2bced1022c5432d2ad}} 
+double \mbox{\hyperlink{class_richards_a533af24824c87e2bced1022c5432d2ad}{f\+\_\+ksat}} (double depth, double perm)
+\begin{DoxyCompactList}\small\item\em computes saturated permeability (m$^\wedge$2) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a54716e2325188dbec988b6779b804eca}\label{class_richards_a54716e2325188dbec988b6779b804eca}} 
+double \mbox{\hyperlink{class_richards_a54716e2325188dbec988b6779b804eca}{f\+\_\+\+Ksat}} (double depth, double g, double mu, double rho)
+\begin{DoxyCompactList}\small\item\em computes saturated hydraulic conductivity (m/s) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a128db144e1de4fdb84465906ce0a5007}\label{class_richards_a128db144e1de4fdb84465906ce0a5007}} 
+double \mbox{\hyperlink{class_richards_a128db144e1de4fdb84465906ce0a5007}{f\+\_\+K}} (double w, double \mbox{\hyperlink{class_richards_a83a4b23648ddac79fdf8a1ec81e993fa}{Ksat}}, double wsat, double b)
+\begin{DoxyCompactList}\small\item\em computes Brooks-\/\+Corey hydraulic conductivity (m/s) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_af914826b8b8a2b9d44c8fc903ed7d6f9}\label{class_richards_af914826b8b8a2b9d44c8fc903ed7d6f9}} 
+double \mbox{\hyperlink{class_richards_af914826b8b8a2b9d44c8fc903ed7d6f9}{f\+\_\+psisat}} (double depth)
+\begin{DoxyCompactList}\small\item\em computes the saturation matric head (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a301ffc317638727342be5bba661bbc69}\label{class_richards_a301ffc317638727342be5bba661bbc69}} 
+double \mbox{\hyperlink{class_richards_a301ffc317638727342be5bba661bbc69}{f\+\_\+dpsidw}} (double w, double \mbox{\hyperlink{class_richards_a762fa01e2f246ce3513b47ac756e3ebd}{psisat}}, double wsat, double b)
+\begin{DoxyCompactList}\small\item\em computes derivative of Brooks-\/\+Corey matric head w/r/t water fraction (-\/) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_adcb6a1a6e1d3fc566868e6bac9fd5a4c}\label{class_richards_adcb6a1a6e1d3fc566868e6bac9fd5a4c}} 
+bool \mbox{\hyperlink{class_richards_adcb6a1a6e1d3fc566868e6bac9fd5a4c}{f\+\_\+infil}} (double \mbox{\hyperlink{class_richards_a9983f4233c11224b481b51e9d560dcc6}{t}})
+\begin{DoxyCompactList}\small\item\em infiltration flag \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a65f99dabbb716495c172586fcb41991f}\label{class_richards_a65f99dabbb716495c172586fcb41991f}} 
+double \mbox{\hyperlink{class_richards_a65f99dabbb716495c172586fcb41991f}{f\+\_\+w\+\_\+bot}} (double poro)
+\begin{DoxyCompactList}\small\item\em bottom boundary condition \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a431c3d4eca231114d57525e16ec00a6b}\label{class_richards_a431c3d4eca231114d57525e16ec00a6b}} 
+void \mbox{\hyperlink{class_richards_a431c3d4eca231114d57525e16ec00a6b}{infil\+\_\+times}} (double \mbox{\hyperlink{class_richards_a9983f4233c11224b481b51e9d560dcc6}{t}}, double $\ast$ta, double $\ast$tb)
+\begin{DoxyCompactList}\small\item\em computes beginning and end of next or current infiltration event \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_afe7883905981fc69dc0874163cf4c1c4}\label{class_richards_afe7883905981fc69dc0874163cf4c1c4}} 
+double \mbox{\hyperlink{class_richards_afe7883905981fc69dc0874163cf4c1c4}{f\+\_\+q}} (double \mbox{\hyperlink{class_richards_a14a828700d0184129767de6ceecd6e4d}{K}}, double \mbox{\hyperlink{class_richards_a587448d911820f22420f46b69ae87913}{dpsidw}}, double \mbox{\hyperlink{class_richards_adefd6d89ea77b3b84feca732c09f162c}{dwdz}}, double satl, double satr)
+\begin{DoxyCompactList}\small\item\em computes the flux between two cells \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a33b13c0e6a5de77f912acb0b123bd04f}\label{class_richards_a33b13c0e6a5de77f912acb0b123bd04f}} 
+double \mbox{\hyperlink{class_richards_a33b13c0e6a5de77f912acb0b123bd04f}{f\+\_\+dwdt}} (double qt, double qb, double \mbox{\hyperlink{class_richards_a1a6da1995d8eaee70bcfdcdab4f9a1a5}{delz}})
+\begin{DoxyCompactList}\small\item\em computes the time derivative of a cell, given fluxes on its sides \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a74d10a6d0d40f694e473cf0618150bfd}\label{class_richards_a74d10a6d0d40f694e473cf0618150bfd}} 
+void \mbox{\hyperlink{class_richards_a74d10a6d0d40f694e473cf0618150bfd}{update\+\_\+q}} (double $\ast$w, double \mbox{\hyperlink{class_richards_a9983f4233c11224b481b51e9d560dcc6}{t}})
+\begin{DoxyCompactList}\small\item\em updates fluxes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a8e88ccb751949c6171c2bc0ff1959338}\label{class_richards_a8e88ccb751949c6171c2bc0ff1959338}} 
+void \mbox{\hyperlink{class_richards_a8e88ccb751949c6171c2bc0ff1959338}{ode\+\_\+fun}} (double $\ast$solin, double $\ast$fout)
+\begin{DoxyCompactList}\small\item\em ode function for the integrator \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_afbf8ff9c8cf4856b151691696250375d}\label{class_richards_afbf8ff9c8cf4856b151691696250375d}} 
+double \mbox{\hyperlink{class_richards_afbf8ff9c8cf4856b151691696250375d}{dt\+\_\+adapt}} ()
+\begin{DoxyCompactList}\small\item\em computes the next time step, based on the maximum diffusivity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a015c02fede0602ca079cc67dba5ea8a5}\label{class_richards_a015c02fede0602ca079cc67dba5ea8a5}} 
+void \mbox{\hyperlink{class_richards_a015c02fede0602ca079cc67dba5ea8a5}{steady}} (double atol=1e-\/9, unsigned long ntol=1000000)
+\begin{DoxyCompactList}\small\item\em integrates to steady state using current state boundary conditions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a65adf9f9cddbbc74ec0b3c00a58d9f15}\label{class_richards_a65adf9f9cddbbc74ec0b3c00a58d9f15}} 
+void \mbox{\hyperlink{class_richards_a65adf9f9cddbbc74ec0b3c00a58d9f15}{spinup}} (double rtol=1e-\/12, bool quiet=true)
+\begin{DoxyCompactList}\small\item\em integrates over infiltration periods until nearly periodic behavior is established \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_abe3198adc1ff2cec6f080fa56cbce649}\label{class_richards_abe3198adc1ff2cec6f080fa56cbce649}} 
+void \mbox{\hyperlink{class_richards_abe3198adc1ff2cec6f080fa56cbce649}{before\+\_\+solve}} ()
+\begin{DoxyCompactList}\small\item\em does extra stuff before starting a solve \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a8d3e9d1b5f218a94906a3fe5ae02f1db}\label{class_richards_a8d3e9d1b5f218a94906a3fe5ae02f1db}} 
+void \mbox{\hyperlink{class_richards_a8d3e9d1b5f218a94906a3fe5ae02f1db}{after\+\_\+snap}} (std\+::string dirout, long isnap, double \mbox{\hyperlink{class_richards_a9983f4233c11224b481b51e9d560dcc6}{t}})
+\begin{DoxyCompactList}\small\item\em does extra stuff after every snap \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a9396337e0be73688cb1e64de9df6c3b6}\label{class_richards_a9396337e0be73688cb1e64de9df6c3b6}} 
+void \mbox{\hyperlink{class_richards_a9396337e0be73688cb1e64de9df6c3b6}{q\+\_\+updated}} (double \mbox{\hyperlink{class_richards_a9983f4233c11224b481b51e9d560dcc6}{t}}, bool $\ast$qup)
+\begin{DoxyCompactList}\small\item\em updates fluxes and sets a flag, if needed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a6b2baa2a348ae63b72f40d553b1a9d24}\label{class_richards_a6b2baa2a348ae63b72f40d553b1a9d24}} 
+void \mbox{\hyperlink{class_richards_a6b2baa2a348ae63b72f40d553b1a9d24}{after\+\_\+step}} (double tin)
+\begin{DoxyCompactList}\small\item\em does extra stuff after every step \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_aaae781ea60cceaadba4f5ab6b6af7b92}\label{class_richards_aaae781ea60cceaadba4f5ab6b6af7b92}} 
+void \mbox{\hyperlink{class_richards_aaae781ea60cceaadba4f5ab6b6af7b92}{after\+\_\+solve}} ()
+\begin{DoxyCompactList}\small\item\em does extra stuff after integrating \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_richards_a9a95decfdc4853778a75e1e16fa8f4be}\label{class_richards_a9a95decfdc4853778a75e1e16fa8f4be}} 
+\mbox{\hyperlink{struct_settings}{Settings}} \mbox{\hyperlink{class_richards_a9a95decfdc4853778a75e1e16fa8f4be}{stg}}
+\begin{DoxyCompactList}\small\item\em settings container \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a340ab7e7d98564cc28c0ff863e830ae5}\label{class_richards_a340ab7e7d98564cc28c0ff863e830ae5}} 
+const long \mbox{\hyperlink{class_richards_a340ab7e7d98564cc28c0ff863e830ae5}{n}}
+\begin{DoxyCompactList}\small\item\em number of cells \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a53a30a3e958b8636b95b632b46d430a0}\label{class_richards_a53a30a3e958b8636b95b632b46d430a0}} 
+const double \mbox{\hyperlink{class_richards_a53a30a3e958b8636b95b632b46d430a0}{dep}}
+\begin{DoxyCompactList}\small\item\em length/depth of domain (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a932bd9f9e5bbe7eb7a0a4386af93c851}\label{class_richards_a932bd9f9e5bbe7eb7a0a4386af93c851}} 
+const std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_a932bd9f9e5bbe7eb7a0a4386af93c851}{ze}}
+\begin{DoxyCompactList}\small\item\em cell edge coordinates (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a67a892c1b0e05f7a2097efab5bf464fe}\label{class_richards_a67a892c1b0e05f7a2097efab5bf464fe}} 
+const std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_a67a892c1b0e05f7a2097efab5bf464fe}{zc}}
+\begin{DoxyCompactList}\small\item\em cell center coordinates (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a1a6da1995d8eaee70bcfdcdab4f9a1a5}\label{class_richards_a1a6da1995d8eaee70bcfdcdab4f9a1a5}} 
+const std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_a1a6da1995d8eaee70bcfdcdab4f9a1a5}{delz}}
+\begin{DoxyCompactList}\small\item\em cell width (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a68ff17ec55deea4f286fa2f9fcb79689}\label{class_richards_a68ff17ec55deea4f286fa2f9fcb79689}} 
+const std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_a68ff17ec55deea4f286fa2f9fcb79689}{delze}}
+\begin{DoxyCompactList}\small\item\em cell widths used for stability calculations (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a1e5d3b30668ab5e1e51e5236a2aba667}\label{class_richards_a1e5d3b30668ab5e1e51e5236a2aba667}} 
+const std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_a1e5d3b30668ab5e1e51e5236a2aba667}{vefac}}
+\begin{DoxyCompactList}\small\item\em factors for cell edge values \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_aaaa97f2b305e1dc7788eff051fab667c}\label{class_richards_aaaa97f2b305e1dc7788eff051fab667c}} 
+const std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_aaaa97f2b305e1dc7788eff051fab667c}{gefac}}
+\begin{DoxyCompactList}\small\item\em factors for cell edge gradients \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a10a3a5e107de4e26a54fa65f2d800447}\label{class_richards_a10a3a5e107de4e26a54fa65f2d800447}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_a10a3a5e107de4e26a54fa65f2d800447}{dtcons}}
+\begin{DoxyCompactList}\small\item\em constants for finding maximum stable time step \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_afd42b26ccb6c76efc978f27c547fe3bf}\label{class_richards_afd42b26ccb6c76efc978f27c547fe3bf}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_afd42b26ccb6c76efc978f27c547fe3bf}{poroc}}
+\begin{DoxyCompactList}\small\item\em porosity at cell centers (maximum saturation fraction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a37961c540d07d644c1526f8cd59a85a2}\label{class_richards_a37961c540d07d644c1526f8cd59a85a2}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_a37961c540d07d644c1526f8cd59a85a2}{poroe}}
+\begin{DoxyCompactList}\small\item\em porosity at cell edges \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a83a4b23648ddac79fdf8a1ec81e993fa}\label{class_richards_a83a4b23648ddac79fdf8a1ec81e993fa}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_a83a4b23648ddac79fdf8a1ec81e993fa}{Ksat}}
+\begin{DoxyCompactList}\small\item\em saturated hydraulic conductivity over depth (m/s) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a762fa01e2f246ce3513b47ac756e3ebd}\label{class_richards_a762fa01e2f246ce3513b47ac756e3ebd}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_a762fa01e2f246ce3513b47ac756e3ebd}{psisat}}
+\begin{DoxyCompactList}\small\item\em saturated matric head (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a9b8b9201c5b603ac04501b5a349f130a}\label{class_richards_a9b8b9201c5b603ac04501b5a349f130a}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_a9b8b9201c5b603ac04501b5a349f130a}{we}}
+\begin{DoxyCompactList}\small\item\em water fractions at cell edges \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a587448d911820f22420f46b69ae87913}\label{class_richards_a587448d911820f22420f46b69ae87913}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_a587448d911820f22420f46b69ae87913}{dpsidw}}
+\begin{DoxyCompactList}\small\item\em derivative of psi w/r/t moisture \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_adefd6d89ea77b3b84feca732c09f162c}\label{class_richards_adefd6d89ea77b3b84feca732c09f162c}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_adefd6d89ea77b3b84feca732c09f162c}{dwdz}}
+\begin{DoxyCompactList}\small\item\em derivative of moisture w/r/t z \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a14a828700d0184129767de6ceecd6e4d}\label{class_richards_a14a828700d0184129767de6ceecd6e4d}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_a14a828700d0184129767de6ceecd6e4d}{K}}
+\begin{DoxyCompactList}\small\item\em hydraulic conductivity (unsaturated) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a3a11aa0f6f33902430135407162f3b19}\label{class_richards_a3a11aa0f6f33902430135407162f3b19}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_a3a11aa0f6f33902430135407162f3b19}{D}}
+\begin{DoxyCompactList}\small\item\em diffusivity (K$\ast$d psi /dt) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_af308b0bc7d5e6eabdb816c134fd3b605}\label{class_richards_af308b0bc7d5e6eabdb816c134fd3b605}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_richards_af308b0bc7d5e6eabdb816c134fd3b605}{q}}
+\begin{DoxyCompactList}\small\item\em fluxes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a9983f4233c11224b481b51e9d560dcc6}\label{class_richards_a9983f4233c11224b481b51e9d560dcc6}} 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_richards_a9983f4233c11224b481b51e9d560dcc6}{t}}
+\begin{DoxyCompactList}\small\item\em time tracker \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a76e1ed5406a77f5a2e886f85439e7bdb}\label{class_richards_a76e1ed5406a77f5a2e886f85439e7bdb}} 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_richards_a76e1ed5406a77f5a2e886f85439e7bdb}{tsnap}}
+\begin{DoxyCompactList}\small\item\em snapshot times \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a66501766d5faf4a5ef5516d55a311c8f}\label{class_richards_a66501766d5faf4a5ef5516d55a311c8f}} 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_richards_a66501766d5faf4a5ef5516d55a311c8f}{qtop}}
+\begin{DoxyCompactList}\small\item\em top boundary flux \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a363771a513dd49c611c6bece9226a4ff}\label{class_richards_a363771a513dd49c611c6bece9226a4ff}} 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_richards_a363771a513dd49c611c6bece9226a4ff}{qmid}}
+\begin{DoxyCompactList}\small\item\em middle boundary flux \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_afddcb3e3dbaace6070c2ee32dd4dcc49}\label{class_richards_afddcb3e3dbaace6070c2ee32dd4dcc49}} 
+unsigned long \mbox{\hyperlink{class_richards_afddcb3e3dbaace6070c2ee32dd4dcc49}{mididx}}
+\begin{DoxyCompactList}\small\item\em index of approximate middle edge \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_af26200415f1103b19ad54a3f3f16b83f}\label{class_richards_af26200415f1103b19ad54a3f3f16b83f}} 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_richards_af26200415f1103b19ad54a3f3f16b83f}{qbot}}
+\begin{DoxyCompactList}\small\item\em bottom boundary flux \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a7b679d47572f7ebf39adfb8058c1eae4}\label{class_richards_a7b679d47572f7ebf39adfb8058c1eae4}} 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{class_richards_a7b679d47572f7ebf39adfb8058c1eae4}{qall}}
+\begin{DoxyCompactList}\small\item\em whether to track A\+LL fluxes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_a99f222c771bc3031fec64d100adfce57}\label{class_richards_a99f222c771bc3031fec64d100adfce57}} 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{class_richards_a99f222c771bc3031fec64d100adfce57}{wall}}
+\begin{DoxyCompactList}\small\item\em whether to track A\+LL water fractions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_richards_aaecca20ae4d22d4fe862fb6942510078}\label{class_richards_aaecca20ae4d22d4fe862fb6942510078}} 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_richards_aaecca20ae4d22d4fe862fb6942510078}{infil}}
+\begin{DoxyCompactList}\small\item\em infiltration flag \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+the main model class 
+
+Definition at line 54 of file richards.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_richards_a8c177f09b9d5c873439c1585277cb36f}\label{class_richards_a8c177f09b9d5c873439c1585277cb36f}} 
+\index{Richards@{Richards}!Richards@{Richards}}
+\index{Richards@{Richards}!Richards@{Richards}}
+\doxysubsubsection{\texorpdfstring{Richards()}{Richards()}}
+{\footnotesize\ttfamily Richards\+::\+Richards (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_grid}{Grid}}}]{grid,  }\item[{\mbox{\hyperlink{struct_settings}{Settings}}}]{stgin }\end{DoxyParamCaption})}
+
+
+
+constructs 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em grid} & a \mbox{\hyperlink{class_grid}{Grid}} object defining the model domain and discretization \\
+\hline
+\mbox{\texttt{ in}}  & {\em stgin} & a \mbox{\hyperlink{struct_settings}{Settings}} object defining model settings and configuration \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file richards.\+cc.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{richards_8h}{richards.\+h}}\item 
+src/\mbox{\hyperlink{richards_8cc}{richards.\+cc}}\end{DoxyCompactItemize}

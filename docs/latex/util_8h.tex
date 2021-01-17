@@ -1,0 +1,60 @@
+\hypertarget{util_8h}{}\doxysection{src/util.h File Reference}
+\label{util_8h}\index{src/util.h@{src/util.h}}
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{util_8h_a4ba67c6c5f6d58844eece44ff28f38f1}\label{util_8h_a4ba67c6c5f6d58844eece44ff28f38f1}} 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{util_8h_a4ba67c6c5f6d58844eece44ff28f38f1}{swap}} (T $\ast$a, T $\ast$b)
+\begin{DoxyCompactList}\small\item\em swaps two variables \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{util_8h_a62163c0f0411bc0c2c4d6514038eb0ba}\label{util_8h_a62163c0f0411bc0c2c4d6514038eb0ba}} 
+double \mbox{\hyperlink{util_8h_a62163c0f0411bc0c2c4d6514038eb0ba}{max}} (double $\ast$a, long n)
+\begin{DoxyCompactList}\small\item\em find max of array \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{util_8h_ae454593e7f974d53b1e3efb7f5a13325}\label{util_8h_ae454593e7f974d53b1e3efb7f5a13325}} 
+double \mbox{\hyperlink{util_8h_ae454593e7f974d53b1e3efb7f5a13325}{absmax}} (double $\ast$a, long n)
+\begin{DoxyCompactList}\small\item\em find max magnitude of array \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{util_8h_a68a0c0ca7a6df60a74659b8543e44054}\label{util_8h_a68a0c0ca7a6df60a74659b8543e44054}} 
+double \mbox{\hyperlink{util_8h_a68a0c0ca7a6df60a74659b8543e44054}{min}} (double $\ast$a, long n)
+\begin{DoxyCompactList}\small\item\em find min of array \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{util_8h_a53657ede02cafb0a71b7136d6dc3452b}\label{util_8h_a53657ede02cafb0a71b7136d6dc3452b}} 
+{\footnotesize template$<$class T $>$ }\\double \mbox{\hyperlink{util_8h_a53657ede02cafb0a71b7136d6dc3452b}{maxreldif}} (T a, T b, long n)
+\begin{DoxyCompactList}\small\item\em finds the maximum relative difference between two arrays/vectors \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{util_8h_ae3d048ff3c1b92dd4cb62645b5c572bb}\label{util_8h_ae3d048ff3c1b92dd4cb62645b5c572bb}} 
+{\footnotesize template$<$class T $>$ }\\long \mbox{\hyperlink{util_8h_ae3d048ff3c1b92dd4cb62645b5c572bb}{argclose}} (T a, double b, long n)
+\begin{DoxyCompactList}\small\item\em find index of value in array closest to a number \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{util_8h_ae839d8674b935bb005f0744054ae1840}\label{util_8h_ae839d8674b935bb005f0744054ae1840}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{util_8h_ae839d8674b935bb005f0744054ae1840}{linspace}} (double a, double b, long n)
+\begin{DoxyCompactList}\small\item\em create an evenly spaced vector of values over a range \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{util_8h_a7d7cc0e07b0784611598e2842ba8bfe0}\label{util_8h_a7d7cc0e07b0784611598e2842ba8bfe0}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{util_8h_a7d7cc0e07b0784611598e2842ba8bfe0}{logspace}} (double a, double b, long n)
+\begin{DoxyCompactList}\small\item\em create an logarithmically spaced vector of values over a range \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{util_8h_aaecf04cbc0094f76a61812469cb0f6c5}{subsample}} (std\+::vector$<$ T $>$ v, unsigned long n)
+\begin{DoxyCompactList}\small\item\em subsample a vector, keeping first and last elements \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{util_8h_aaecf04cbc0094f76a61812469cb0f6c5}\label{util_8h_aaecf04cbc0094f76a61812469cb0f6c5}} 
+\index{util.h@{util.h}!subsample@{subsample}}
+\index{subsample@{subsample}!util.h@{util.h}}
+\doxysubsubsection{\texorpdfstring{subsample()}{subsample()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$T$>$ subsample (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$}]{v,  }\item[{unsigned long}]{n }\end{DoxyParamCaption})}
+
+
+
+subsample a vector, keeping first and last elements 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & vector to subsample \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & approximate length target \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 71 of file util.\+h.
+

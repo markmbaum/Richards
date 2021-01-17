@@ -1,0 +1,69 @@
+\hypertarget{settings_8h}{}\doxysection{src/settings.h File Reference}
+\label{settings_8h}\index{src/settings.h@{src/settings.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_settings}{Settings}}
+\begin{DoxyCompactList}\small\item\em container struct for all the settings variables needed for a Bous\+Therm\+Model run \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{settings_8h_ae10d8087597e432880d814cb5f0f2058}\label{settings_8h_ae10d8087597e432880d814cb5f0f2058}} 
+bool \mbox{\hyperlink{settings_8h_ae10d8087597e432880d814cb5f0f2058}{eval\+\_\+txt\+\_\+bool}} (const char $\ast$s)
+\begin{DoxyCompactList}\small\item\em converts a string into a bool if it\textquotesingle{}s supposed to be \char`\"{}true\char`\"{} or \char`\"{}false\char`\"{} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{settings_8h_a34b0904576f3d7628fcae287acf40cb3}\label{settings_8h_a34b0904576f3d7628fcae287acf40cb3}} 
+bool \mbox{\hyperlink{settings_8h_a34b0904576f3d7628fcae287acf40cb3}{cmp}} (const char $\ast$s1, const char $\ast$s2)
+\begin{DoxyCompactList}\small\item\em abbreviates strcmp \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{settings_8h_a25eab84f0ae5e54cd0abf8677f0bcb9a}\label{settings_8h_a25eab84f0ae5e54cd0abf8677f0bcb9a}} 
+long \mbox{\hyperlink{settings_8h_a25eab84f0ae5e54cd0abf8677f0bcb9a}{to\+\_\+long}} (const char $\ast$val)
+\begin{DoxyCompactList}\small\item\em converts a character to an integet \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_settings}{Settings}} \mbox{\hyperlink{settings_8h_ae609ddc53f98dca77cedc878686bf8ab}{parse\+\_\+settings}} (std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ sv)
+\begin{DoxyCompactList}\small\item\em parses a settings file and returns it in a \mbox{\hyperlink{struct_settings}{Settings}} structure \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_settings}{Settings}} \mbox{\hyperlink{settings_8h_a82103365ef3f12e790ac7b1ff754452f}{copy\+\_\+settings}} (\mbox{\hyperlink{struct_settings}{Settings}} \&b)
+\begin{DoxyCompactList}\small\item\em constructs a copy of another \mbox{\hyperlink{struct_settings}{Settings}} object \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{settings_8h_a82103365ef3f12e790ac7b1ff754452f}\label{settings_8h_a82103365ef3f12e790ac7b1ff754452f}} 
+\index{settings.h@{settings.h}!copy\_settings@{copy\_settings}}
+\index{copy\_settings@{copy\_settings}!settings.h@{settings.h}}
+\doxysubsubsection{\texorpdfstring{copy\_settings()}{copy\_settings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_settings}{Settings}} copy\+\_\+settings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_settings}{Settings}} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+constructs a copy of another \mbox{\hyperlink{struct_settings}{Settings}} object 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b} & the \mbox{\hyperlink{struct_settings}{Settings}} object to copy \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 87 of file settings.\+cc.
+
+\mbox{\Hypertarget{settings_8h_ae609ddc53f98dca77cedc878686bf8ab}\label{settings_8h_ae609ddc53f98dca77cedc878686bf8ab}} 
+\index{settings.h@{settings.h}!parse\_settings@{parse\_settings}}
+\index{parse\_settings@{parse\_settings}!settings.h@{settings.h}}
+\doxysubsubsection{\texorpdfstring{parse\_settings()}{parse\_settings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_settings}{Settings}} parse\+\_\+settings (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$}]{sv }\end{DoxyParamCaption})}
+
+
+
+parses a settings file and returns it in a \mbox{\hyperlink{struct_settings}{Settings}} structure 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sv} & vector of vectors of strings from read\+\_\+values\+\_\+file() \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file settings.\+cc.
+

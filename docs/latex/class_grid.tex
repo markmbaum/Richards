@@ -1,0 +1,86 @@
+\hypertarget{class_grid}{}\doxysection{Grid Class Reference}
+\label{class_grid}\index{Grid@{Grid}}
+
+
+class for constructing and containing grid information  
+
+
+
+
+{\ttfamily \#include $<$grid.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_grid_a29d305b5cc19139cbc626534cd5f3f33}{Grid}} (double depth, double delz0, double delzfrac, double delzmax)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grid_a186a269d2904d5bb7cab69edb8425cc3}\label{class_grid_a186a269d2904d5bb7cab69edb8425cc3}} 
+long \mbox{\hyperlink{class_grid_a186a269d2904d5bb7cab69edb8425cc3}{get\+\_\+n}} ()
+\begin{DoxyCompactList}\small\item\em gets number of cells \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grid_a887f5e13985e71007892dc3a4039cd7d}\label{class_grid_a887f5e13985e71007892dc3a4039cd7d}} 
+double \mbox{\hyperlink{class_grid_a887f5e13985e71007892dc3a4039cd7d}{get\+\_\+dep}} ()
+\begin{DoxyCompactList}\small\item\em gets length/depth of the domain (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grid_ac13211bb8c1a9719a72d77cf2030c888}\label{class_grid_ac13211bb8c1a9719a72d77cf2030c888}} 
+const std\+::vector$<$ double $>$ \mbox{\hyperlink{class_grid_ac13211bb8c1a9719a72d77cf2030c888}{get\+\_\+ze}} () const
+\begin{DoxyCompactList}\small\item\em gets vector of cell edge coordinates (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grid_afc1832cfe397055bc9b3a9e4aaedfa2e}\label{class_grid_afc1832cfe397055bc9b3a9e4aaedfa2e}} 
+const std\+::vector$<$ double $>$ \mbox{\hyperlink{class_grid_afc1832cfe397055bc9b3a9e4aaedfa2e}{get\+\_\+zc}} () const
+\begin{DoxyCompactList}\small\item\em gets arravectory of cell center coordinates (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grid_aeb5e3db8fa003f2ea7c9ee47997c48af}\label{class_grid_aeb5e3db8fa003f2ea7c9ee47997c48af}} 
+const std\+::vector$<$ double $>$ \mbox{\hyperlink{class_grid_aeb5e3db8fa003f2ea7c9ee47997c48af}{get\+\_\+delz}} () const
+\begin{DoxyCompactList}\small\item\em gets arrayvector of cell width (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grid_a740efc87d02ef58bb645ac47397f7345}\label{class_grid_a740efc87d02ef58bb645ac47397f7345}} 
+const std\+::vector$<$ double $>$ \mbox{\hyperlink{class_grid_a740efc87d02ef58bb645ac47397f7345}{get\+\_\+delze}} () const
+\begin{DoxyCompactList}\small\item\em gets arrayvector of cell widths used for stability calculations (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grid_aed96bb8895fa9f086aa2f690649dff14}\label{class_grid_aed96bb8895fa9f086aa2f690649dff14}} 
+const std\+::vector$<$ double $>$ \mbox{\hyperlink{class_grid_aed96bb8895fa9f086aa2f690649dff14}{get\+\_\+vefac}} () const
+\begin{DoxyCompactList}\small\item\em gets arrayvector of factors for cell edge values \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grid_a1b3b7e17fc14713f62fd7bcde86d2dee}\label{class_grid_a1b3b7e17fc14713f62fd7bcde86d2dee}} 
+const std\+::vector$<$ double $>$ \mbox{\hyperlink{class_grid_a1b3b7e17fc14713f62fd7bcde86d2dee}{get\+\_\+gefac}} () const
+\begin{DoxyCompactList}\small\item\em gets arrayvector of factors for cell edge gradients \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grid_a91526be238fcac9eb42dea4a2b670e40}\label{class_grid_a91526be238fcac9eb42dea4a2b670e40}} 
+void \mbox{\hyperlink{class_grid_a91526be238fcac9eb42dea4a2b670e40}{save}} (std\+::string dirout)
+\begin{DoxyCompactList}\small\item\em writes grid arrays into a directory as binary files \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class for constructing and containing grid information 
+
+The model grid is one dimensional with geometrically spaced elements. The surface cell is always the smallest. Then each cell is {\ttfamily delzfrac} times larger than its shallower neighbor. The maximum cell size is set by {\ttfamily delzmax.} 
+
+Definition at line 17 of file grid.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_grid_a29d305b5cc19139cbc626534cd5f3f33}\label{class_grid_a29d305b5cc19139cbc626534cd5f3f33}} 
+\index{Grid@{Grid}!Grid@{Grid}}
+\index{Grid@{Grid}!Grid@{Grid}}
+\doxysubsubsection{\texorpdfstring{Grid()}{Grid()}}
+{\footnotesize\ttfamily Grid\+::\+Grid (\begin{DoxyParamCaption}\item[{double}]{depth,  }\item[{double}]{delz0,  }\item[{double}]{delzfrac,  }\item[{double}]{delzmax }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em depth} & the total depth of the model domain \\
+\hline
+\mbox{\texttt{ in}}  & {\em delz0} & the depth of the shallowest cell at the surface \\
+\hline
+\mbox{\texttt{ in}}  & {\em delzfrac} & the factor by which each cell is larger than its shallower neighbor \\
+\hline
+\mbox{\texttt{ in}}  & {\em delzmax} & the maximum depth of cells \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file grid.\+cc.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{grid_8h}{grid.\+h}}\item 
+src/\mbox{\hyperlink{grid_8cc}{grid.\+cc}}\end{DoxyCompactItemize}

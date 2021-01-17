@@ -1,0 +1,231 @@
+\hypertarget{io_8h}{}\doxysection{src/io.h File Reference}
+\label{io_8h}\index{src/io.h@{src/io.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{io_8h_aab6cf79af1ac1c0316376189ec582816}{print\+\_\+exit}} (const char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em prints a message before quitting the program \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{io_8h_a405dcb76c7b046e73c3d3fb94b632916}{strip\+\_\+string}} (std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em removes white space at the beginning and end of a string \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{io_8h_a4cd71e5083cad85825f8aa42e641cc5c}{split\+\_\+string}} (char c, std\+::string \&s, std\+::string \&s1, std\+::string \&s2)
+\begin{DoxyCompactList}\small\item\em splits a string on the first instance of a specified character \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{io_8h_abbd8f8b9498c800ef1d3066e8f5d98ba}\label{io_8h_abbd8f8b9498c800ef1d3066e8f5d98ba}} 
+std\+::string \mbox{\hyperlink{io_8h_abbd8f8b9498c800ef1d3066e8f5d98ba}{int\+\_\+to\+\_\+string}} (long i)
+\begin{DoxyCompactList}\small\item\em converts an integer into a string \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{io_8h_a6250a2af412024a7a690f55cd75da21d}\label{io_8h_a6250a2af412024a7a690f55cd75da21d}} 
+void \mbox{\hyperlink{io_8h_a6250a2af412024a7a690f55cd75da21d}{check\+\_\+file\+\_\+write}} (const char $\ast$fn)
+\begin{DoxyCompactList}\small\item\em checks if a file can be written to \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{io_8h_a1daa3213c5088be8749cd4ef8f182dd2}{write\+\_\+array}} (const char $\ast$fn, T $\ast$a, long size)
+\begin{DoxyCompactList}\small\item\em writes an array to a binary file \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{io_8h_a19400608e51ef85eee2b81e97e9bdc18}{write\+\_\+array}} (const std\+::string \&fn, T $\ast$a, long size)
+\begin{DoxyCompactList}\small\item\em writes an array to a binary file \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{io_8h_a627618a75c63b64f862e7b05cc40cc36}{write\+\_\+array}} (const char $\ast$fn, std\+::vector$<$ T $>$ a)
+\begin{DoxyCompactList}\small\item\em writes an array to a binary file \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{io_8h_a22dac2d2f8a634d364b66364b5914398}{write\+\_\+array}} (const std\+::string \&fn, std\+::vector$<$ T $>$ a)
+\begin{DoxyCompactList}\small\item\em writes an array to a binary file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{io_8h_a218765cd8d3baba97189cdd16540aae4}{check\+\_\+file\+\_\+read}} (const char $\ast$fn)
+\begin{DoxyCompactList}\small\item\em checks if a file can be opened for reading \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{io_8h_a4d7bc68a0e8285ad29d11bf56adf374c}{read\+\_\+values}} (const char $\ast$fn)
+\begin{DoxyCompactList}\small\item\em reads a settings file into a vector of vectors of strings \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{io_8h_a218765cd8d3baba97189cdd16540aae4}\label{io_8h_a218765cd8d3baba97189cdd16540aae4}} 
+\index{io.h@{io.h}!check\_file\_read@{check\_file\_read}}
+\index{check\_file\_read@{check\_file\_read}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{check\_file\_read()}{check\_file\_read()}}
+{\footnotesize\ttfamily void check\+\_\+file\+\_\+read (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fn }\end{DoxyParamCaption})}
+
+
+
+checks if a file can be opened for reading 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fn} & path to file to check \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 62 of file io.\+cc.
+
+\mbox{\Hypertarget{io_8h_aab6cf79af1ac1c0316376189ec582816}\label{io_8h_aab6cf79af1ac1c0316376189ec582816}} 
+\index{io.h@{io.h}!print\_exit@{print\_exit}}
+\index{print\_exit@{print\_exit}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{print\_exit()}{print\_exit()}}
+{\footnotesize\ttfamily void print\+\_\+exit (\begin{DoxyParamCaption}\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+prints a message before quitting the program 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg} & a string to print before exiting \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file io.\+cc.
+
+\mbox{\Hypertarget{io_8h_a4d7bc68a0e8285ad29d11bf56adf374c}\label{io_8h_a4d7bc68a0e8285ad29d11bf56adf374c}} 
+\index{io.h@{io.h}!read\_values@{read\_values}}
+\index{read\_values@{read\_values}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{read\_values()}{read\_values()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ read\+\_\+values (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fn }\end{DoxyParamCaption})}
+
+
+
+reads a settings file into a vector of vectors of strings 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fn} & path to settings file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 72 of file io.\+cc.
+
+\mbox{\Hypertarget{io_8h_a4cd71e5083cad85825f8aa42e641cc5c}\label{io_8h_a4cd71e5083cad85825f8aa42e641cc5c}} 
+\index{io.h@{io.h}!split\_string@{split\_string}}
+\index{split\_string@{split\_string}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{split\_string()}{split\_string()}}
+{\footnotesize\ttfamily void split\+\_\+string (\begin{DoxyParamCaption}\item[{char}]{c,  }\item[{std\+::string \&}]{s,  }\item[{std\+::string \&}]{s1,  }\item[{std\+::string \&}]{s2 }\end{DoxyParamCaption})}
+
+
+
+splits a string on the first instance of a specified character 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & character to split on \\
+\hline
+\mbox{\texttt{ in}}  & {\em s} & string to split \\
+\hline
+\mbox{\texttt{ out}}  & {\em s1} & first part of split string \\
+\hline
+\mbox{\texttt{ out}}  & {\em s2} & second part of split string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file io.\+cc.
+
+\mbox{\Hypertarget{io_8h_a405dcb76c7b046e73c3d3fb94b632916}\label{io_8h_a405dcb76c7b046e73c3d3fb94b632916}} 
+\index{io.h@{io.h}!strip\_string@{strip\_string}}
+\index{strip\_string@{strip\_string}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{strip\_string()}{strip\_string()}}
+{\footnotesize\ttfamily void strip\+\_\+string (\begin{DoxyParamCaption}\item[{std\+::string \&}]{s }\end{DoxyParamCaption})}
+
+
+
+removes white space at the beginning and end of a string 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em s} & string to strip of white space \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file io.\+cc.
+
+\mbox{\Hypertarget{io_8h_a627618a75c63b64f862e7b05cc40cc36}\label{io_8h_a627618a75c63b64f862e7b05cc40cc36}} 
+\index{io.h@{io.h}!write\_array@{write\_array}}
+\index{write\_array@{write\_array}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{write\_array()}{write\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void write\+\_\+array (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fn,  }\item[{std\+::vector$<$ T $>$}]{a }\end{DoxyParamCaption})}
+
+
+
+writes an array to a binary file 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fn} & target file path \\
+\hline
+\mbox{\texttt{ in}}  & {\em a} & vector of numbers to write \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file io.\+h.
+
+\mbox{\Hypertarget{io_8h_a1daa3213c5088be8749cd4ef8f182dd2}\label{io_8h_a1daa3213c5088be8749cd4ef8f182dd2}} 
+\index{io.h@{io.h}!write\_array@{write\_array}}
+\index{write\_array@{write\_array}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{write\_array()}{write\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void write\+\_\+array (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fn,  }\item[{T $\ast$}]{a,  }\item[{long}]{size }\end{DoxyParamCaption})}
+
+
+
+writes an array to a binary file 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fn} & target file path \\
+\hline
+\mbox{\texttt{ in}}  & {\em a} & array of numbers to write \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & length of array \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file io.\+h.
+
+\mbox{\Hypertarget{io_8h_a22dac2d2f8a634d364b66364b5914398}\label{io_8h_a22dac2d2f8a634d364b66364b5914398}} 
+\index{io.h@{io.h}!write\_array@{write\_array}}
+\index{write\_array@{write\_array}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{write\_array()}{write\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void write\+\_\+array (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fn,  }\item[{std\+::vector$<$ T $>$}]{a }\end{DoxyParamCaption})}
+
+
+
+writes an array to a binary file 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fn} & target file path \\
+\hline
+\mbox{\texttt{ in}}  & {\em a} & vector of numbers to write \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 88 of file io.\+h.
+
+\mbox{\Hypertarget{io_8h_a19400608e51ef85eee2b81e97e9bdc18}\label{io_8h_a19400608e51ef85eee2b81e97e9bdc18}} 
+\index{io.h@{io.h}!write\_array@{write\_array}}
+\index{write\_array@{write\_array}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{write\_array()}{write\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void write\+\_\+array (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fn,  }\item[{T $\ast$}]{a,  }\item[{long}]{size }\end{DoxyParamCaption})}
+
+
+
+writes an array to a binary file 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fn} & target file path \\
+\hline
+\mbox{\texttt{ in}}  & {\em a} & array of numbers to write \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & length of array \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 68 of file io.\+h.
+

@@ -1,0 +1,99 @@
+#-------------------------------------------------------------------------------
+#grid settings
+
+#depth of domain (m)
+depth = 1.75
+#cell depth at surface (m)
+delz0 = 0.018
+#fraction increase in cell depth
+delzfrac = 1.02
+#maximum cell depth
+delzmax = 0.03
+#output grid variables to output directory?
+save_grid = True
+
+#-------------------------------------------------------------------------------
+#model setup and integration settings
+
+#integration time (a multiple of tunit seconds)
+tint = 10
+#number of seconds to use for tint (seconds) an Earth year is 31557600
+tunit = 3600
+#number of snapshots to write to output directory
+nsnap = 5
+#maximum length of tracker variables which capture every step
+nmaxout = 1e8
+#safety factor applied to maximum stable time step
+dtfac = 0.3
+
+#-------------------------------------------------------------------------------
+#physical parameters
+
+#porosity
+poro = 0.5
+#permeability (m^2)
+perm = 1e-12
+#gravity (m/s^2)
+g = 3.7
+#water viscosity (Pa*s)
+mu = 9e-4
+#water density (kg/m^3)
+rho = 1e3
+#Brooks-Corey parameter
+b = 5
+#wilting saturation or minimum saturation fraction (as fraction of porosity)
+wilt = 0.1
+
+#-------------------------------------------------------------------------------
+#periodic forcing
+
+#surface evaporation time scale for exponential (seconds)
+tauevap = 3600
+#surface evaporation length scale (m)
+Levap = 0.01
+#infiltration period (seconds)
+infper = 259200
+#infiltration duration (seconds)
+infdur = 3600
+
+#-------------------------------------------------------------------------------
+#tracker and output settings
+
+#porosity at cell centers
+poroc = True
+#porosity at cell edges
+poroe = True
+#saturated hydraulic conductivity at cell edges (m/s)
+Ksat = True
+#saturated matric head at cell edges (m)
+psisat = True
+#derivative of matric head w/r/t water fraction at cell edges
+dpsidw = True
+#derivative of water fraction w/r/t depth
+dwdz = True
+#unsaturated hydraulic conductivity at cell edges (m/s)
+K = True
+#unsaturated "diffusivity" at cell edges (m^2)
+D = True
+#water fraction at cell centers
+w = True
+#water fraction at cell edges
+we = True
+#all water fractions
+wall = True
+#water flux at cell edges at snapshots
+q = True
+#water flux at surface at all time steps
+qtop = True
+#water flux at approximate middle of domain at all time steps
+qmid = True
+#water flux at bottom of domain at all time steps
+qbot = True
+#water flux at all edges at all time steps
+qall = True
+#whether to track infiltration flag
+infil = True
+#time
+t = True
+#snapshot times
+tsnap = True

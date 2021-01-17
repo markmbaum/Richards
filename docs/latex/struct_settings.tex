@@ -1,0 +1,146 @@
+\hypertarget{struct_settings}{}\doxysection{Settings Struct Reference}
+\label{struct_settings}\index{Settings@{Settings}}
+
+
+container struct for all the settings variables needed for a Bous\+Therm\+Model run  
+
+
+
+
+{\ttfamily \#include $<$settings.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_settings_af8c4332c0cc7259dae8bb5273f41fccb}\label{struct_settings_af8c4332c0cc7259dae8bb5273f41fccb}} 
+double \mbox{\hyperlink{struct_settings_af8c4332c0cc7259dae8bb5273f41fccb}{depth}}
+\begin{DoxyCompactList}\small\item\em domain depth (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_ab0a1e5d15b035380784773ef936ab5d8}\label{struct_settings_ab0a1e5d15b035380784773ef936ab5d8}} 
+double \mbox{\hyperlink{struct_settings_ab0a1e5d15b035380784773ef936ab5d8}{delz0}}
+\begin{DoxyCompactList}\small\item\em surface cell width (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a047ff485cfc381e91333c37b49ffe2ad}\label{struct_settings_a047ff485cfc381e91333c37b49ffe2ad}} 
+double \mbox{\hyperlink{struct_settings_a047ff485cfc381e91333c37b49ffe2ad}{delzfrac}}
+\begin{DoxyCompactList}\small\item\em fraction increase for deeper neighbor cell \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a9b8521d7e410d22d938f4a19dd0780ab}\label{struct_settings_a9b8521d7e410d22d938f4a19dd0780ab}} 
+double \mbox{\hyperlink{struct_settings_a9b8521d7e410d22d938f4a19dd0780ab}{delzmax}}
+\begin{DoxyCompactList}\small\item\em maximum cell width (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a5a1d7c26a230e7622427eee3298d25e1}\label{struct_settings_a5a1d7c26a230e7622427eee3298d25e1}} 
+bool \mbox{\hyperlink{struct_settings_a5a1d7c26a230e7622427eee3298d25e1}{save\+\_\+grid}}
+\begin{DoxyCompactList}\small\item\em whether to write grid files \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_add8d6f88c8b349592c029a1a94766398}\label{struct_settings_add8d6f88c8b349592c029a1a94766398}} 
+double \mbox{\hyperlink{struct_settings_add8d6f88c8b349592c029a1a94766398}{tint}}
+\begin{DoxyCompactList}\small\item\em duration of solve \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_aee1d953b7a77c4d38ff34b87001faf29}\label{struct_settings_aee1d953b7a77c4d38ff34b87001faf29}} 
+double \mbox{\hyperlink{struct_settings_aee1d953b7a77c4d38ff34b87001faf29}{tunit}}
+\begin{DoxyCompactList}\small\item\em time unit to use (number of seconds) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_ab5a52f5310c96c6abd96308f7985b2de}\label{struct_settings_ab5a52f5310c96c6abd96308f7985b2de}} 
+long \mbox{\hyperlink{struct_settings_ab5a52f5310c96c6abd96308f7985b2de}{nsnap}}
+\begin{DoxyCompactList}\small\item\em number of snaps to take \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a5fadf540108ed63ecbc2709a4fc9b8fd}\label{struct_settings_a5fadf540108ed63ecbc2709a4fc9b8fd}} 
+long \mbox{\hyperlink{struct_settings_a5fadf540108ed63ecbc2709a4fc9b8fd}{nmaxout}}
+\begin{DoxyCompactList}\small\item\em maximum length of output vectors (subsampled to accomodate) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_ab0f87d875ba4d55452121c72d5cc4559}\label{struct_settings_ab0f87d875ba4d55452121c72d5cc4559}} 
+double \mbox{\hyperlink{struct_settings_ab0f87d875ba4d55452121c72d5cc4559}{dtfac}}
+\begin{DoxyCompactList}\small\item\em safety factor for stable time step \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a6a0abde948c6f118b175098fb990f3a2}\label{struct_settings_a6a0abde948c6f118b175098fb990f3a2}} 
+double \mbox{\hyperlink{struct_settings_a6a0abde948c6f118b175098fb990f3a2}{poro}}
+\begin{DoxyCompactList}\small\item\em porosity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a8fdef34ddaeac656a3b6fcf141450f51}\label{struct_settings_a8fdef34ddaeac656a3b6fcf141450f51}} 
+double \mbox{\hyperlink{struct_settings_a8fdef34ddaeac656a3b6fcf141450f51}{perm}}
+\begin{DoxyCompactList}\small\item\em permeability (m$^\wedge$2) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a98f040bb32c7417e6202a837f96cb0a8}\label{struct_settings_a98f040bb32c7417e6202a837f96cb0a8}} 
+double \mbox{\hyperlink{struct_settings_a98f040bb32c7417e6202a837f96cb0a8}{g}}
+\begin{DoxyCompactList}\small\item\em gravity (m/s$^\wedge$2) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a23c0a2ed2ab7b563c65dda09ebca90f6}\label{struct_settings_a23c0a2ed2ab7b563c65dda09ebca90f6}} 
+double \mbox{\hyperlink{struct_settings_a23c0a2ed2ab7b563c65dda09ebca90f6}{mu}}
+\begin{DoxyCompactList}\small\item\em water viscosity (Pa$\ast$s) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a70c3cbba85f127d5013fe5125ffda56a}\label{struct_settings_a70c3cbba85f127d5013fe5125ffda56a}} 
+double \mbox{\hyperlink{struct_settings_a70c3cbba85f127d5013fe5125ffda56a}{rho}}
+\begin{DoxyCompactList}\small\item\em water density (kg/m$^\wedge$3) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a3e072012780622132a7a6a029b5b5bf6}\label{struct_settings_a3e072012780622132a7a6a029b5b5bf6}} 
+double \mbox{\hyperlink{struct_settings_a3e072012780622132a7a6a029b5b5bf6}{b}}
+\begin{DoxyCompactList}\small\item\em Brooks-\/\+Corey parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_aa9eab46b67952e2bf37d29f87c9982db}\label{struct_settings_aa9eab46b67952e2bf37d29f87c9982db}} 
+double \mbox{\hyperlink{struct_settings_aa9eab46b67952e2bf37d29f87c9982db}{wilt}}
+\begin{DoxyCompactList}\small\item\em wilting saturation as fraction of porosity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_aaeefbf0f63444794a6124de269f3840e}\label{struct_settings_aaeefbf0f63444794a6124de269f3840e}} 
+double \mbox{\hyperlink{struct_settings_aaeefbf0f63444794a6124de269f3840e}{tauevap}}
+\begin{DoxyCompactList}\small\item\em evaporation timescale \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a2adae2074c3a21978933215313af1e49}\label{struct_settings_a2adae2074c3a21978933215313af1e49}} 
+double \mbox{\hyperlink{struct_settings_a2adae2074c3a21978933215313af1e49}{Levap}}
+\begin{DoxyCompactList}\small\item\em evaporation depth \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a23db36f37ef9a55099310d128224a2e5}\label{struct_settings_a23db36f37ef9a55099310d128224a2e5}} 
+double \mbox{\hyperlink{struct_settings_a23db36f37ef9a55099310d128224a2e5}{infper}}
+\begin{DoxyCompactList}\small\item\em infiltration period (s) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a5888e9a4e9848d8382b026867268bd34}\label{struct_settings_a5888e9a4e9848d8382b026867268bd34}} 
+double \mbox{\hyperlink{struct_settings_a5888e9a4e9848d8382b026867268bd34}{infdur}}
+\begin{DoxyCompactList}\small\item\em infiltration duration (s) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a0e2b1bc6270e7a9a1ec60fd876f49e3a}\label{struct_settings_a0e2b1bc6270e7a9a1ec60fd876f49e3a}} 
+bool \mbox{\hyperlink{struct_settings_a0e2b1bc6270e7a9a1ec60fd876f49e3a}{poroc}}
+\begin{DoxyCompactList}\small\item\em whether to write porosity at cell centers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a0734712b566c9f930e67304cb7169bee}\label{struct_settings_a0734712b566c9f930e67304cb7169bee}} 
+bool \mbox{\hyperlink{struct_settings_a0734712b566c9f930e67304cb7169bee}{poroe}}
+\begin{DoxyCompactList}\small\item\em whether to write porosity at cell edges \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a79b320297317c21f1a413bea80c4aa2e}\label{struct_settings_a79b320297317c21f1a413bea80c4aa2e}} 
+bool \mbox{\hyperlink{struct_settings_a79b320297317c21f1a413bea80c4aa2e}{Ksat}}
+\begin{DoxyCompactList}\small\item\em whether to write saturated hydraulic conductivity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a10e452407db8338d240a1c9484260a4d}\label{struct_settings_a10e452407db8338d240a1c9484260a4d}} 
+bool \mbox{\hyperlink{struct_settings_a10e452407db8338d240a1c9484260a4d}{psisat}}
+\begin{DoxyCompactList}\small\item\em whether to write saturated matric head \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_ad4c76eebe0d0bb3ae4fa6c53253966cb}\label{struct_settings_ad4c76eebe0d0bb3ae4fa6c53253966cb}} 
+bool \mbox{\hyperlink{struct_settings_ad4c76eebe0d0bb3ae4fa6c53253966cb}{dpsidw}}
+\begin{DoxyCompactList}\small\item\em whether to write dpsidw when snapping \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_ae8742122b42821bef81b9dfef8db72b1}\label{struct_settings_ae8742122b42821bef81b9dfef8db72b1}} 
+bool \mbox{\hyperlink{struct_settings_ae8742122b42821bef81b9dfef8db72b1}{dwdz}}
+\begin{DoxyCompactList}\small\item\em whether to write moisture fraction derivative when snapping \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_acb588ad725726e839a35903dc417bf3f}\label{struct_settings_acb588ad725726e839a35903dc417bf3f}} 
+bool \mbox{\hyperlink{struct_settings_acb588ad725726e839a35903dc417bf3f}{K}}
+\begin{DoxyCompactList}\small\item\em whether to write hydraulic conductivity when snapping \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a8d7b55594c950c4326712e7f8ea90206}\label{struct_settings_a8d7b55594c950c4326712e7f8ea90206}} 
+bool \mbox{\hyperlink{struct_settings_a8d7b55594c950c4326712e7f8ea90206}{D}}
+\begin{DoxyCompactList}\small\item\em whether to write diffusivity when snapping \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a3c0343328bc895d24987b0ed50f21fc3}\label{struct_settings_a3c0343328bc895d24987b0ed50f21fc3}} 
+bool \mbox{\hyperlink{struct_settings_a3c0343328bc895d24987b0ed50f21fc3}{w}}
+\begin{DoxyCompactList}\small\item\em whether to water fraction profile when snapping \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a1b6b732fa308395438a92dacaaeb6782}\label{struct_settings_a1b6b732fa308395438a92dacaaeb6782}} 
+bool \mbox{\hyperlink{struct_settings_a1b6b732fa308395438a92dacaaeb6782}{we}}
+\begin{DoxyCompactList}\small\item\em whether to write water fraction at cell edges when snapping \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_af4b374b8e23e7425c14e0922fb754ceb}\label{struct_settings_af4b374b8e23e7425c14e0922fb754ceb}} 
+bool \mbox{\hyperlink{struct_settings_af4b374b8e23e7425c14e0922fb754ceb}{wall}}
+\begin{DoxyCompactList}\small\item\em whether to track all water fractions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a6a9e4eb097d1afccbd5d83b1e922ee5f}\label{struct_settings_a6a9e4eb097d1afccbd5d83b1e922ee5f}} 
+bool \mbox{\hyperlink{struct_settings_a6a9e4eb097d1afccbd5d83b1e922ee5f}{q}}
+\begin{DoxyCompactList}\small\item\em whether to write water flux when snapping \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_ad4bb99f6a2700c761f647d57f507fe24}\label{struct_settings_ad4bb99f6a2700c761f647d57f507fe24}} 
+bool \mbox{\hyperlink{struct_settings_ad4bb99f6a2700c761f647d57f507fe24}{qtop}}
+\begin{DoxyCompactList}\small\item\em whether to track top flux \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a08877a3cc30fd637858be9cb4fda64c7}\label{struct_settings_a08877a3cc30fd637858be9cb4fda64c7}} 
+bool \mbox{\hyperlink{struct_settings_a08877a3cc30fd637858be9cb4fda64c7}{qmid}}
+\begin{DoxyCompactList}\small\item\em whether to track middle flux \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_ae7472926ea041f1a090529e7161695b3}\label{struct_settings_ae7472926ea041f1a090529e7161695b3}} 
+bool \mbox{\hyperlink{struct_settings_ae7472926ea041f1a090529e7161695b3}{qbot}}
+\begin{DoxyCompactList}\small\item\em whether to track bottom flux \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a247f892c570e68d883184f6c9368f01d}\label{struct_settings_a247f892c570e68d883184f6c9368f01d}} 
+bool \mbox{\hyperlink{struct_settings_a247f892c570e68d883184f6c9368f01d}{qall}}
+\begin{DoxyCompactList}\small\item\em whether to track all fluxes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a11eca232cc77ad9aa2363a914afb41e4}\label{struct_settings_a11eca232cc77ad9aa2363a914afb41e4}} 
+bool \mbox{\hyperlink{struct_settings_a11eca232cc77ad9aa2363a914afb41e4}{infil}}
+\begin{DoxyCompactList}\small\item\em whether to track infiltration flag \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a7a8baefd43a03bfe443c91b97fa2e460}\label{struct_settings_a7a8baefd43a03bfe443c91b97fa2e460}} 
+bool \mbox{\hyperlink{struct_settings_a7a8baefd43a03bfe443c91b97fa2e460}{t}}
+\begin{DoxyCompactList}\small\item\em whether to track step times \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_settings_a392d31c89e5415a72f8b79961def17c3}\label{struct_settings_a392d31c89e5415a72f8b79961def17c3}} 
+bool \mbox{\hyperlink{struct_settings_a392d31c89e5415a72f8b79961def17c3}{tsnap}}
+\begin{DoxyCompactList}\small\item\em whether to track snap times \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+container struct for all the settings variables needed for a Bous\+Therm\+Model run 
+
+Definition at line 13 of file settings.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{settings_8h}{settings.\+h}}\end{DoxyCompactItemize}
