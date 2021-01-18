@@ -2,13 +2,13 @@
 #grid settings
 
 #depth of domain (m)
-depth = 1.75
+depth = 1
 #cell depth at surface (m)
-delz0 = 0.018
+delz0 = 0.02
 #fraction increase in cell depth
-delzfrac = 1.02
+delzfrac = 1.025
 #maximum cell depth
-delzmax = 0.03
+delzmax = 0.1
 #output grid variables to output directory?
 save_grid = True
 
@@ -30,17 +30,17 @@ dtfac = 0.3
 #physical parameters
 
 #porosity
-poro = 0.5
+poro = 0.4
 #permeability (m^2)
-perm = 1e-12
+perm = 3e-13
 #gravity (m/s^2)
-g = 3.7
+g = 9.8
 #water viscosity (Pa*s)
 mu = 9e-4
 #water density (kg/m^3)
 rho = 1e3
 #Brooks-Corey parameter
-b = 5
+b = 4
 #wilting saturation or minimum saturation fraction (as fraction of porosity)
 wilt = 0.1
 
@@ -48,11 +48,11 @@ wilt = 0.1
 #periodic forcing
 
 #surface evaporation time scale for exponential (seconds)
-tauevap = 3600
+tauevap = 1800
 #surface evaporation length scale (m)
 Levap = 0.01
 #infiltration period (seconds)
-infper = 259200
+infper = 172800
 #infiltration duration (seconds)
 infdur = 3600
 
