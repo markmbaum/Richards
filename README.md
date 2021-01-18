@@ -22,14 +22,14 @@ python plot_period.py
 cd ..
 ```
 
-The first plot is like a [Hovmöller diagram](https://en.wikipedia.org/wiki/Hovm%C3%B6ller_diagram). It shows water flux throughout the model depth and across two wetting cycles. Red indicates upward flux and blue indicates downward flux. Every 2 days, the top of the diagram turns blue for about an hour when the surface is wet. The surface dries relatively quickly and moisture moves down the model domain, eventually causing a downward flux at the bottom boundary. The bottom boundary, however, switches between downward and upward flow, however. It's not clear from this plot whether, on average, more water is being removed from the bottom boundary that it is gaining.
+The first plot is like a [Hovmöller diagram](https://en.wikipedia.org/wiki/Hovm%C3%B6ller_diagram). It shows water flux throughout the model depth and across two wetting cycles. Red indicates upward flux and blue indicates downward flux. Every 2 days, the top of the diagram turns blue for about an hour when the surface is wet. The surface dries relatively quickly and moisture moves down the model domain, eventually causing a downward flux at the bottom boundary. The bottom boundary, however, switches between downward and upward flow. It's not clear from this plot whether, on average, more water is being removed from the bottom boundary than it is gaining.
 
 ![norm_flux](plots/norm_flux.png)
 
-This second plot simply shows the saturation fraction in the model domain, using the same Hovmöller style as above. The wet period at the top of the model is clear again.
+This second plot shows the fluxes at the top, middle, and bottom of the model over time. At the top, the wet period manifests as a massive spike in downward (blue) water flux separated by much slower upward (red) flux as water evaporates from the soil into the atmosphere. In the middle of the domain, the wetting and drying cycles are smoothed out and slightly delayed. At the bottom, the cycle is even smoother and delayed. In this example, the bottom boundary is, on average, losing water. You can prove it by integrating the flux curve over time at any depth.
 
 ![flux](plots/flux.png)
 
-This third plot shows the fluxes at the top, middle, and bottom of the model over time. At the top, the wet period manifests as a massive spike in downward (blue) water flux separated by much slower upward (red) flux as water evaporates from the soil into the atmosphere. In the middle of the domain, the wetting and drying cycles are smoothed out and slightly delayed. At the bottom, the cycle is even smoother and delayed. In this example, the bottom boundary is, on average, losing water. You can prove it by integrating the flux curve over time at any depth.
+This third plot simply shows the saturation fraction in the model domain, using the same Hovmöller style as in the first plot. The wet period at the top of the model is clear again.
 
 ![water_frac](plots/water_frac.png)
